@@ -11,7 +11,7 @@
   --accent: #0f9d58;
 
   /* ✅ Light-mode header/footer to keep logo & nav visible */
-  --header-bg: rgba(255,255,255,0.96);
+  --header-bg: rgba(201, 201, 201, 0.7);
   --footer-bg: #f3f4f6;
 
   --shadow: 0 6px 18px rgba(17,17,17,0.08);
@@ -127,6 +127,7 @@ body {
 --------------------------------------------------- */
 .hero {
   background: url("https://picsum.photos/1600/900?blur") center/cover no-repeat;
+  loading: lazy;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -359,6 +360,70 @@ main.container.section p {
   transition: background 0.3s;
 }
 #contactForm button.btn:hover { background: #0c7b44; }
+#contactForm input.error,
+#contactForm textarea.error {
+  border-color: #e63946;
+}
+
+#contactForm input.success,
+#contactForm textarea.success {
+  border-color: #38b000;
+}
+/* -----------------------------
+   Contact Form Input States
+----------------------------- */
+#contactForm input.error,
+#contactForm textarea.error {
+  border-color: #e74c3c;   /* Red border for errors */
+  background-color: #ffeaea; /* Light red background */
+}
+
+#contactForm input.success,
+#contactForm textarea.success {
+  border-color: #2ecc71;   /* Green border for success */
+  background-color: #eaffea; /* Light green background */
+}
+
+/* Optional: smooth transition for border/background changes */
+#contactForm input,
+#contactForm textarea {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+/* -----------------------------
+   Contact Form Message
+----------------------------- */
+#form-msg {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Message colors for light theme */
+body:not([data-theme="dark"]) #form-msg.error {
+  color: #e74c3c;
+  background-color: #ffeaea;
+}
+
+body:not([data-theme="dark"]) #form-msg.success {
+  color: #2ecc71;
+  background-color: #eaffea;
+}
+
+/* Message colors for dark theme */
+body[data-theme="dark"] #form-msg.error {
+  color: #f28b82;
+  background-color: #2f1b1b;
+}
+
+body[data-theme="dark"] #form-msg.success {
+  color: #a6f3a6;
+  background-color: #1b2f1b;
+}
+
 
 /* ---------------------------------------------------
    Footer

@@ -2,6 +2,7 @@
    Main site JavaScript
    ============================ */
 document.addEventListener('DOMContentLoaded', () => {
+
   /* ---------- 1. Mobile menu toggle ---------- */
   const hamburger = document.querySelector('.hamburger');
   const navLinks  = document.querySelector('.nav-links');
@@ -19,23 +20,36 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('name')?.value.trim();
-      const email = document.getElementById('email')?.value.trim();
-      const msg = document.getElementById('message')?.value.trim();
-      const out = document.getElementById('form-msg');
+      const nameInput  = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const msgInput   = document.getElementById('message');
+      const out        = document.getElementById('form-msg');
+
+      const name  = nameInput?.value.trim();
+      const email = emailInput?.value.trim();
+      const msg   = msgInput?.value.trim();
+
+      // Reset previous states
+      [nameInput, emailInput, msgInput].forEach(el => {
+        el.classList.remove('error', 'success');
+      });
 
       if (!name || !email || !msg) {
+        [nameInput, emailInput, msgInput].forEach(el => el.classList.add('error'));
         out.textContent = 'All fields are required.';
         out.style.color = 'red';
         return;
       }
 
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        emailInput.classList.add('error');
         out.textContent = 'Enter a valid email address.';
         out.style.color = 'red';
         return;
       }
 
+      // Success
+      [nameInput, emailInput, msgInput].forEach(el => el.classList.add('success'));
       out.textContent = 'Message sent successfully!';
       out.style.color = 'green';
       form.reset();
@@ -59,8 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!toggleBtn) return;
     const isDark = document.body.getAttribute('data-theme') === 'dark';
     toggleBtn.setAttribute('aria-pressed', String(isDark));
+
     const moon = toggleBtn.querySelector('.moon');
     const sun  = toggleBtn.querySelector('.sun');
+
     if (moon) moon.hidden = isDark;  // moon shows when light
     if (sun)  sun.hidden  = !isDark; // sun shows when dark
   }
@@ -71,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     applyTheme('dark');
   }
+
   reflectToggleUI();
 
   if (toggleBtn) {
@@ -80,4 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
       reflectToggleUI();
     });
   }
+
 });

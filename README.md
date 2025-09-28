@@ -1,7 +1,7 @@
 # Victor Emeka – Personal Portfolio Website
 
 ## 🌐 Live Demo
-[🔵 https://exploreme.vercel.app](https://exploreme.vercel.app)  
+[🔵 https://exploreemkajnr.netlify.app](https://exploreemkajnr.netlify.app)  
 
 ---
 

@@ -2,46 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  
   <meta name="description" content="Victor Emeka's personal portfolio website showcasing projects, skills, and contact information." />
   <meta property="og:title" content="Victor Emeka – Full-Stack Developer Portfolio" />
-  <meta property="og:description" content="Explore the portfolio of Victor Emeka,
-    a skilled full-stack developer specializing in modern web applications." />
-    <meta property="og:image" content="images/Victor.jpg" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:description" content="Explore the portfolio of Victor Emeka, a skilled full-stack developer specializing in modern web applications." />
+  <meta property="og:image" content="images/Victor.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victor Emeka | Contact</title>
   <link rel="stylesheet" href="css/styles.css" />
-  
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init('IagriqFeMCK0-s6V7'); // Your public key
+  </script>
 </head>
 <body>
   <header class="site-header">
-      <nav class="navbar container">
-        <a href="index.html" class="logo">Victor<span>Emeka</span></a>
-        
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html" >Projects</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <div class="nav-controls">
-          <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
-            <span class="moon">🌙</span>
-            <span class="sun" hidden>☀️</span>
-          </button>
-          <button class="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-
+    <nav class="navbar container">
+      <a href="index.html" class="logo">Victor<span>Emeka</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+          <span class="moon">🌙</span>
+          <span class="sun" hidden>☀️</span>
+        </button>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main class="container section">
     <h1>Contact Me</h1>
     <p>Feel free to reach out via this form. Fields marked * are required.</p>
+
     <form id="contactForm">
       <input type="text" id="name" placeholder="Name *" required />
       <input type="email" id="email" placeholder="Email *" required />
@@ -49,11 +51,27 @@
       <button type="submit" class="btn">Send Message</button>
       <p id="form-msg"></p>
     </form>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <h3>Connect with me:</h3>
+      <a href="https://twitter.com/victorbjay" target="_blank" aria-label="Twitter">
+        <img src="images/Twitter.svg" alt="Twitter" />
+      </a>
+      <a href="https://linkedin.com/in/emkajnr" target="_blank" aria-label="LinkedIn">
+        <img src="images/LinkedIn.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/victorbjay" target="_blank" aria-label="GitHub">
+        <img src="images/GitHub.svg" alt="GitHub" />
+      </a>
+    </div>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Victor Emeka. All rights reserved.</p>
   </footer>
+
+  <!-- Main JS -->
   <script defer src="js/script.js"></script>
 </body>
 </html>

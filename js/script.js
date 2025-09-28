@@ -99,3 +99,59 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* ---------- 4. EmailJS integration ---------- */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nameInput  = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const msgInput   = document.getElementById('message');
+    const out        = document.getElementById('form-msg');
+
+    const name  = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const msg   = msgInput.value.trim();
+
+    // Reset previous states
+    [nameInput, emailInput, msgInput].forEach(el => el.classList.remove('error', 'success'));
+
+    // Basic validation (same as before)
+    if (!name || !email || !msg) {
+      [nameInput, emailInput, msgInput].forEach(el => el.classList.add('error'));
+      out.textContent = 'All fields are required.';
+      out.style.color = 'red';
+      return;
+    }
+
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      emailInput.classList.add('error');
+      out.textContent = 'Enter a valid email address.';
+      out.style.color = 'red';
+      return;
+    }
+
+    // Prepare EmailJS parameters
+    const templateParams = {
+      from_name: name,      // Sender's name
+      from_email: email,    // Sender's email
+      message: msg          // Message content
+    };
+
+    // Send email via EmailJS
+    emailjs.send("service_4t54dv6", "template_6lyvf7a", templateParams)
+      .then(() => {
+        [nameInput, emailInput, msgInput].forEach(el => el.classList.add('success'));
+        out.textContent = 'Message sent successfully!';
+        out.style.color = 'green';
+        contactForm.reset();
+      })
+      .catch((err) => {
+        out.textContent = 'Failed to send message. Try again later.';
+        out.style.color = 'red';
+        console.error('EmailJS error:', err);
+      });
+  });
+}

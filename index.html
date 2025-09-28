@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Emeka | Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  
+</head>
+<body>
+  <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">Victor<span>Emeka</span></a>
+        
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+            <span class="moon">🌙</span>
+            <span class="sun" hidden>☀️</span>
+          </button>
+          <button class="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+    </nav>
+  </header>
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-content container">
+        <h1>Bringing Web Pages to Life</h1>
+        <p>Beautiful CSS3 animations and powerful JavaScript logic.</p>
+        <a href="projects.html" class="btn">Explore Projects</a>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+
+    <section id="features" class="container section">
+    <h2>Interactive Features</h2>
+    <p class="features-intro">
+        Explore the interactive elements that make this site dynamic and user-friendly.
+    </p>
+
+    <div class="grid">
+        <div class="card">
+        <img src="images/icon-darkmode.svg" alt="Dark Mode Icon" class="feature-icon" />
+        <h3>Light / Dark Mode</h3>
+        <p>Switch seamlessly between light and dark themes to suit your preference.</p>
+        </div>
+
+        <div class="card">
+        <img src="images/icon-animate.svg" alt="Animation Icon" class="feature-icon" />
+        <h3>Animated Boxes</h3>
+        <p>Smooth CSS3 transitions bring movement and life to page elements.</p>
+        </div>
+
+        <div class="card">
+        <img src="images/icon-form.svg" alt="Form Validation Icon" class="feature-icon" />
+        <h3>Custom Form Validation</h3>
+        <p>Real-time input checks ensure error-free submissions and better UX.</p>
+        </div>
+     </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section container photo-gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images/office1.jpg" alt="Workspace setup">
+            <img src="images/code-desk.jpg" alt="Code desk">
+            <img src="images/project1.jpeg" alt="Project project-mockup">
+            <img src="images/overview.jpg" alt="Crystal texture">
+            <img src="images/landscape1.jpg" alt="Landscape view">
+            <img src="images/project-mockup.jpg" alt="Project mockup">
+        </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Victor Emeka. All rights reserved.</p>
+  </footer>
+  <script defer src="js/script.js"></script>
+</body>
+
+</html>

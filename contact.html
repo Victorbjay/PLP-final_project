@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Emeka | Contact</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  
+</head>
+<body>
+  <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo">Victor<span>Emeka</span></a>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" >Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+            <span class="moon">🌙</span>
+            <span class="sun" hidden>☀️</span>
+          </button>
+          <button class="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out via this form. Fields marked * are required.</p>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name *" required />
+      <input type="email" id="email" placeholder="Email *" required />
+      <textarea id="message" placeholder="Your Message *" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="form-msg"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Victor Emeka. All rights reserved.</p>
+  </footer>
+  <script defer src="js/script.js"></script>
+</body>
+</html>

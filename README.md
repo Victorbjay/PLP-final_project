@@ -1,90 +1,91 @@
-# 📦 Final Assignment: Build, Organize, and Deploy a Multipage Website
+# Victor Emeka – Personal Portfolio Website
 
-You're now ready to bring everything together—HTML, CSS, JavaScript, planning, structure, and deployment. This final project challenges you to **conceptualize, build, and deploy a multi-page website** that is responsive, interactive, and ready for the real world.
-
-This assignment will guide you from planning your site all the way to deploying it online. Let’s make your project *production-worthy*! 🚀
-
----
-
-## 🌐🎯 Part 1: Planning and Organizing a Multipage Website
-
-Before you write any code, take time to plan:
-
-* Define your website's purpose (portfolio, product showcase, blog, etc.)
-* Outline 3–5 pages (e.g., Home, About, Services, Contact, Gallery)
-* Sketch or describe the layout of each page
-* Map out internal navigation (how pages link to one another)
-
-**Goal:** Show intentional structure and user journey across the site.
+## 🌐 Live Demo
+[🔵 https://exploreme.vercel.app](https://exploreme.vercel.app)  
 
 ---
 
-## 🌍💻 Part 2: Build the Website Using HTML5, CSS, and JavaScript
-
-Using your plan, begin building:
-
-* Use HTML5 for semantic structure
-* Apply CSS for responsive layout, styling, and animations
-* Use JavaScript to add interactivity (menus, forms, toggles, dynamic content)
-
-Each page should:
-
-* Be mobile-responsive
-* Share a consistent layout/header/footer
-* Include at least one interactive element (e.g., form validation, toggle menu, animation on scroll)
-
-**Goal:** Integrate everything you’ve learned in a cohesive, functioning project.
+## 🎯 Project Purpose
+This multi-page website showcases my work as a **full-stack developer, designer, and former gemologist**.  
+It serves as a personal portfolio, a contact point for potential clients or employers, and a space to highlight selected photography and imagery.
 
 ---
 
-## 🛠️🚀 Part 3: Best Practices for Code Organization
+## 🗂️ Site Structure & User Journey
+The site consists of **5 responsive pages**, all sharing a consistent header, footer, and navigation:
 
-Before deployment, refactor your project to follow production-friendly practices:
+1. **Home** – Hero section with call-to-action and overview of services.
+2. **About** – Biography, skills, and professional background.
+3. **Projects / Services** – Grid of featured projects with hover animations.
+4. **Photo Gallery** – Curated high-resolution images of workspaces, gemstones, and landscapes.
+5. **Contact** – Custom JavaScript-validated form for direct communication.
 
-* Organize files in folders (`/css`, `/js`, `/images`, etc.)
-* Write clean, modular, and commented code
-* Use meaningful file names and relative paths
-* Validate your HTML/CSS and test on different screen sizes
-
-**Goal:** Prepare your codebase to be readable, maintainable, and scalable.
-
----
-
-## 🌐🚀 Part 4: Introduction to Hosting and Deployment
-
-Once your project is complete, choose a method to **host your site online**.
-
-You can use:
-
-* **GitHub Pages** (great for portfolios and static sites)
-* **Netlify** (powerful CI/CD features and easy form support)
-* **Vercel** (lightning-fast deployment for frontend projects)
-
-Deploy your project and confirm that:
-
-* All links and scripts work
-* It loads properly on mobile and desktop
-* It has a clear, shareable URL
-
-**Goal:** Publish your work online and make it accessible to the world.
+Navigation is accessible on every page via a sticky top bar, a mobile hamburger menu, and a **dark/light theme toggle**.
 
 ---
 
-## Deliverables
-
-1. A GitHub repository containing:
-
-   * Your complete project code, properly organized
-   * A `README.md` file explaining your project purpose, structure, and live URL
-2. A live deployed website (hosted via GitHub Pages, Netlify, or Vercel)
+## ✨ Key Features
+- **Dark/Light Theme Toggle**  
+  Smooth CSS variable–based theming with persistent preference stored in `localStorage`.
+- **Responsive Hamburger Navigation**  
+  Fully accessible menu that adapts to all screen sizes.
+- **Interactive Photo Gallery**  
+  Masonry-style grid with hover zoom effects.
+- **Form Validation**  
+  Vanilla JavaScript regex validation with friendly error messages.
+- **Fixed Header & Smooth Transitions**  
+  Header remains visible on scroll; global color and background transitions.
 
 ---
 
-## Outcome
+## 🛠️ Technology Stack
+- **HTML5** – Semantic layout and accessibility.
+- **CSS3** – Flexbox/Grid responsive design, transitions, and keyframe animations.
+- **JavaScript (ES6)** – Interactivity:
+  - Mobile navigation toggle
+  - Dark/light theme management
+  - Custom form validation and DOM updates
 
-* Clarity and thoroughness of planning documentation
-* Proper use of HTML5, CSS, and JavaScript across multiple pages
-* Responsive and accessible design
-* Clean, well-organized, and commented code
-* Successful live deployment with a working link
-* Evidence of following best practices
+---
+
+## 📱 Responsive Design
+- **Mobile-first** media queries
+- Adaptive grid/flex layouts
+- Tested on desktop, tablet, and mobile screen sizes.
+
+---
+
+## ⚙️ Folder Structure
+project-root/
+├─ index.html
+├─ about.html
+├─ projects.html
+├─ gallery.html
+├─ contact.html
+├─ css/
+│ └─ style.css
+├─ js/
+│ └─ main.js
+└─ images/...
+
+---
+
+## 🚀 Deployment
+1. **GitHub Pages**: Push to `main` and enable Pages in repo settings.  
+2. **Netlify/Vercel**: Drag-and-drop or connect repo for automatic builds.
+
+---
+
+## 🔗 Credits
+- [Unsplash](https://unsplash.com) for free high-resolution gallery images.
+- Icons: Unicode emoji for theme toggle (🌙 / ☀️).
+
+---
+
+### 💡 Future Enhancements
+- Add blog section for technical writing.
+- Integrate a lightweight back-end or serverless function for contact form email delivery.
+
+---
+
+© 2025 Victor Emeka. All rights reserved.
